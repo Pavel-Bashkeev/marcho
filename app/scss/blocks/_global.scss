@@ -1,1 +1,26 @@
-
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+img{
+    width: auto;
+}
+body{
+    font-size: 16px;
+    color: $colorText;
+    line-height: 26px;
+    @extend %quicksand-500;
+}
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

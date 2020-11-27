@@ -1,0 +1,64 @@
+.header {
+    padding: 40px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        color: $colorTitle;
+        padding: 5px 2px;
+        transition: color .5s , border-color .5s;
+        &:hover {
+            color: $radicalRed;
+            border-color: $radicalRed;
+        }
+        &--active {
+            color: $radicalRed;
+            border-bottom: 1px solid $radicalRed;
+        }
+    }
+}
+.user-nav {
+    display: flex;
+    align-items: center;
+    &__link{
+        position: relative;
+        display: block;
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+        &--img{
+            display: block;
+        }
+    }
+    &__num{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: $radicalRed;
+        text-align: center;
+        border-radius: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        color: $white;
+    }
+}
