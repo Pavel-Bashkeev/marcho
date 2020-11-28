@@ -15,7 +15,7 @@
 
     &__item {
         &:not(:last-child) {
-            margin-right: 25px;
+            margin-right: 30px;
         }
     }
 
@@ -25,6 +25,7 @@
         color: $colorTitle;
         padding: 5px 2px;
         transition: color .5s , border-color .5s;
+        @extend %roboto-400;
         &:hover {
             color: $radicalRed;
             border-color: $radicalRed;
@@ -32,12 +33,14 @@
         &--active {
             color: $radicalRed;
             border-bottom: 1px solid $radicalRed;
+            @extend %roboto-700;
         }
     }
 }
 .user-nav {
     display: flex;
     align-items: center;
+    margin-right: 10px;
     &__link{
         position: relative;
         display: block;
