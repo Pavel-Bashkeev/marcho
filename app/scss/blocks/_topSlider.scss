@@ -1,0 +1,90 @@
+.top-slider {
+    background-image: url(../images/dest/topSlider-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 65px;
+
+    &__container {
+        max-width: 1520px;
+    }
+
+    &__item-inner {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 140px;
+    }
+
+    &__content {
+        padding-top: 117px;
+        padding-left: 20px;
+    }
+
+    &__title {
+        @extend %roboto-700;
+        font-size: 58px;
+        color: $colorTitle;
+        line-height: 68px;
+        letter-spacing: -2px;
+        margin-bottom: 17px;
+
+        &--one {
+            display: block;
+        }
+    }
+
+    &__text {
+        max-width: 445px;
+        margin-bottom: 70px;
+    }
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        bottom: 44px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        li {
+            line-height: 0;
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+
+            button {
+                padding: 0;
+                width: 28px;
+                height: 28px;
+                font-size: 0;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                position: relative;
+                outline: none;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 6px;
+                    height: 6px;
+                    background-color: $colorText;
+                    border-radius: 50%;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    border-color: $radicalRed;
+
+                    &::before {
+                        background-color: $radicalRed;
+                    }
+                }
+
+            }
+        }
+    }
+}
