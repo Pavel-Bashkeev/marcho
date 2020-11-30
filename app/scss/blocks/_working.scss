@@ -1,6 +1,6 @@
 .working {
     padding: 120px 0 60px;
-    background-color: $lightGray;
+    margin-bottom: 62px;
 
     &__inner {
         display: grid;
@@ -19,7 +19,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50% 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-30%,-36%);
             z-index: 0;
         }
 
@@ -39,7 +39,7 @@
 
     &__item {
         background-color: $white;
-        padding: 56px 40px 60px;
+        padding: 56px 20px 60px 40px;
         box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
         z-index: 1;
     }
@@ -55,5 +55,6 @@
         font-size: 22px;
         color: $colorTitle;
         margin-bottom: 10px;
+
     }
 }
