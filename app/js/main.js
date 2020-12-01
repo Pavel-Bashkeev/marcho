@@ -5,5 +5,9 @@ $(function(){
           fade: true,
           autoplay: true,
           autoplaySpeed: 2000
-      })
+      });
+
+      $('.videoBlog__play-btn').fancybox({
+        
+      });
  });

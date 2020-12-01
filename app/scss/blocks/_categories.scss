@@ -1,5 +1,8 @@
 .categories {
     position: relative;
+    background-color: $white;
+    padding-bottom: 120px;
+
     &::before,
     &::after{
         content: '';
@@ -33,6 +36,7 @@
         grid-template-columns: repeat(3, 370px);
         grid-template-rows: repeat(2, 303px);
         grid-gap: 30px;
+        
     }
 }
 
@@ -41,6 +45,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 34px 40px;
+    z-index: 1;
 
     &--shoes {
         grid-row: 1 / span 2;
