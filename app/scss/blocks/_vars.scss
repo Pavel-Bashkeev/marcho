@@ -22,6 +22,8 @@ $white : #fff;
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
 }
+
+// Исправление ошибки fancybox
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }

@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
+  // Работа таймера начало
   let deadLine = new Date(document.querySelector('.timer-numbers').getAttribute('data-endData'));
 
 
@@ -58,6 +59,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   }
 setClock('timer', deadLine);
+// Работа таймера конец
 });
 
 
