@@ -1,0 +1,86 @@
+.blog{
+    padding: 0 0 164px;
+    background-color: $white;
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-gap: 30px;
+    }
+    &__subTitle{
+        margin-bottom: 55px;
+    }
+}
+.blog-item{
+        background-color: $white;
+        border: 1px solid #ececec;
+        transition: all .5s;
+        &:hover{
+            box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+        }
+      
+    &__image{
+        display: block;
+        margin-bottom: 30px;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 48px 0 30px;
+        margin-bottom: 14px;
+    }
+    &__author-link,
+    &__data-link{
+        padding-left: 31px;
+        position: relative;
+        @extend %quicksand-500;
+        font-size: 16px;
+        line-height: 26px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left:0;
+            width: 20px;
+            height: 20px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    &__author-link::before{
+        background-image: url(../images/dest/icons/blog-author.svg);
+    }
+    &__data-link::before{
+        background-image: url(../images/dest/icons/blog-data.svg);
+    }
+    &__title{
+        @extend %roboto-400;
+        font-size: 22px;
+        line-height: 32px;
+        color: $colorTitle;
+        margin-bottom: 12px;
+        padding: 0 20px 0 29px;
+        letter-spacing: -1px;
+    }
+    &__link{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        transition: color .5s;
+        padding: 0 30px;
+        margin-bottom: 21px;
+        &-arrow{
+            margin-left: 6px;
+            fill: $colorText;
+            transition: all .5s;
+            width: 10px;
+            height: 8px;
+        }
+        &:hover{
+            .blog-item__link-arrow{
+                fill: $radicalRed;
+            }
+            color: $radicalRed;
+        }
+    }
+}

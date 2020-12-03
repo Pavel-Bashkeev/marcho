@@ -24,6 +24,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.5.1",
+    "rateyo": "^2.3.2",
     "reset-css": "^5.0.1",
     "slick-carousel": "^1.8.1"
   }
