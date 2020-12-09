@@ -38,7 +38,7 @@
 					</ul>
 				</nav>
 				<div class="header__user-nav user-nav">
-					<a class="user-nav__link" href="#">
+					<a class="user-nav__link" href="login.html">
 						<img class="user-nav__link--img" src="images/dest/user-nav/user.svg" alt="Login">
 					</a>
 					<a class="user-nav__link" href="#">
@@ -58,7 +58,7 @@
 	</header>
 
 	<main class="main">
-		<section class="top" >
+		<section class="top">
 			<div class="top__container" style="background-image: url('images/dest/page-topBg.jpg');">
 				<h2 class="section__title top__title">
 					log in
@@ -71,9 +71,34 @@
 						<li class="breadcrumbs__item">
 							<a class="breadcrumbs__link" href="login.html">Log in</a>
 						</li>
-						
+
 					</ul>
 				</div>
+			</div>
+		</section>
+		<section class="modal">
+			<div class="container">
+				<div class="modal__links">
+					<a class="modal__link" href="register.html">register</a>
+					<a class="modal__link modal__link--active" href="login.html">log in</a>
+				</div>
+				<form action="#" class="modal__form form">
+					<label class="form__label">
+						Username or email address*
+						<input class="form__input" type="text" required>
+					</label>
+					<label class="form__label">
+						Password*
+						<input class="form__input" type="password" required>
+					</label>
+					<label class="form__label form__label--check">
+						<input type="checkbox">
+						Remember me
+					</label>
+					<button class="form__btn" type="submit">log in</button>
+					<a class="form__link-lost" href="#">Lost your password?</a>
+				</form>
+
 			</div>
 		</section>
 	</main>

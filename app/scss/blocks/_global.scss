@@ -1,40 +1,47 @@
 html,
-body{
+body {
     height: 100%;
 }
+
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-li{
+
+li {
     list-style: none;
 }
-img{
+
+img {
     object-fit: cover;
 }
-body{
+
+body {
     font-size: 16px;
     color: $colorText;
     line-height: 26px;
     @extend %quicksand-500;
     display: flex;
     flex-direction: column;
-    background-color: $lightGray;
 }
-.container{
+
+.container {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
-.main{
+
+.main {
     flex-grow: 1;
 }
-.link-btn{
+
+.link-btn {
     padding: 18px 36px;
     color: #fff;
     text-transform: uppercase;
@@ -43,16 +50,19 @@ body{
     box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
 
 }
-.section__title{
+
+.section__title {
     @extend %roboto-700;
     font-size: 48px;
+    line-height: 48px;
     color: $colorTitle;
     text-align: center;
     margin-bottom: 25px;
     letter-spacing: -2.4px;
     text-transform: uppercase;
 }
-.section__subTitle{
+
+.section__subTitle {
     text-align: center;
     max-width: 570px;
     display: block;
@@ -60,4 +70,78 @@ body{
     letter-spacing: 0.45px;
 }
 
-  
+.top {
+    &__container {
+        max-width: 1700px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 130px 0px;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__title {
+        font-weight: 400;
+    }
+}
+
+.breadcrumbs {
+    display: inline-flex;
+    justify-content: center;
+    padding-left: 25px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/dest/icons/home-icon.svg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        color: #727272;
+        &:not(:last-child){
+            padding-right: 25px;
+            margin-right: 18px;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 9px;
+                height: 10px;
+                transform: translateY(-50%);
+                background-image: url(../images/dest/icons/angle-right.svg);
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        &:last-child {
+            color: $radicalRed;
+
+            .breadcrumbs__link {
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+    }
+
+    &__link {
+        color: inherit;
+    }
+}

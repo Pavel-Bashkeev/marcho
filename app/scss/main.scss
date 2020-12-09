@@ -5,6 +5,7 @@
 
 @import 'blocks/global';
 @import 'blocks/header';
+// page index
 @import 'blocks/topSlider';
 @import 'blocks/working';
 @import 'blocks/categories';
@@ -13,6 +14,11 @@
 @import 'blocks/promoTimer';
 @import 'blocks/promoPartners';
 @import 'blocks/blog';
+// end page index
+// start page login
+@import 'blocks/pages/login/login';
+// end page login
+
 @import 'blocks/footer';
 
 
