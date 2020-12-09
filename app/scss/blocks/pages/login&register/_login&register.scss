@@ -10,14 +10,16 @@
     }
 
     &__link {
+        font-size: 22px;
+
+        color: #29282d;
         transition: color .3s;
 
         &:not(:last-child) {
             margin-right: 60px;
         }
 
-        font-size: 22px;
-        color: #909090;
+
 
         &:hover {
             color: $radicalRed;
@@ -32,12 +34,16 @@
 
 .form {
     &__label {
-        margin-bottom: 30px;
+        
         display: block;
         cursor: pointer;
         @extend %roboto-400;
+        margin-bottom: 40px;
+
         &--check {
+            display: block;
             margin: 60px 0 20px;
+            cursor: pointer;
         }
     }
 
@@ -69,7 +75,17 @@
         cursor: pointer;
         @extend %roboto-400;
     }
-    &__link-lost{
+    &__text{
+        margin-top: -20px;
+        margin-bottom: -30px;
+        &-item{
+            &:not(:last-child){
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__link-lost {
         color: $radicalRed;
     }
 }

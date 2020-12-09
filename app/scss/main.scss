@@ -15,9 +15,12 @@
 @import 'blocks/promoPartners';
 @import 'blocks/blog';
 // end page index
-// start page login
-@import 'blocks/pages/login/login';
-// end page login
+// start page login & register
+@import 'blocks/pages/login&register/login&register';
+// end page login & register
+// start 404-page
+@import 'blocks/pages/404/404';
+// end 404-page
 
 @import 'blocks/footer';
 
