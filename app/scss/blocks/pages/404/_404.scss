@@ -1,0 +1,28 @@
+.header-404 {
+    background-color: $lightGray;
+}
+
+.page-404 {
+    padding: 120px 0;
+    background-image: url(../images/dest/404-bg.png);
+    background-position: 92% 53%;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    &__inner {
+        padding: 137px 0;
+
+    }
+
+    &__title {
+        color: #28384f;
+        text-align: left;
+        text-transform: initial;
+    }
+
+    &__text {
+        max-width: 470px;
+        padding-right: 20px;
+        margin-bottom: 70px;
+    }
+}
