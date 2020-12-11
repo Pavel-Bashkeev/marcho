@@ -13,6 +13,35 @@
             height: 263px;
         }
     }
+    .link-box{
+        background-color: transparent;
+        box-shadow: none;
+        bottom: 103px;
+        
+        &__item{
+            border: none;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+            &:nth-child(2){
+                display: none;
+            }
+            &::after{
+                content: '';
+                display: none;
+            }
+            svg{
+                display: block;
+            }
+        }
+    }
     .products-item__info-wrapper{
         display:  flex;
         flex-direction: column;
