@@ -15,6 +15,13 @@
 @import 'blocks/promoPartners';
 @import 'blocks/blog';
 // end page index
+// start page shop
+@import 'blocks/pages/shop/catalog';
+@import 'blocks/pages/shop/productCart';
+@import 'blocks/pages/shop/catalogFilters';
+@import 'blocks/pages/shop/catalogContent';
+@import 'blocks/pages/shop/pagination';
+// end page shop
 // start page login & register
 @import 'blocks/pages/login&register/login&register';
 // end page login & register
