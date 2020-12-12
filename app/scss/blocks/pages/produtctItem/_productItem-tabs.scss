@@ -1,0 +1,29 @@
+.productItem-tabs{
+    &__top{
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    &__btn{
+        @extend %roboto-400;
+        font-size: 22px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid transparent;
+        &:not(:last-child){
+            margin-right: 60px;
+        }
+        &:hover{
+            color: $colorTitle;
+            border-color: $radicalRed;
+        }
+        &--active{
+            color: $colorTitle;
+            border-color: $radicalRed;
+        }
+    }
+    &__content{
+        display: none;
+        &--active{
+            display: block;
+        }
+    }
+}

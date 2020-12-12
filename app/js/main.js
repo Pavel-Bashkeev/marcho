@@ -1,11 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-	//Создаем объект 'user', который будет содержать информацию Detect.js
-//Вызываем detect.parse() с navigator.userAgent в качестве аргумента
-let user = navigator.userAgent;
-
-// Выводим нужные значения в консоли браузера
-console.log(user);
 	// Работа таймера начало
 	let taimer = document.querySelector('.promo');
 	if (taimer) {
@@ -68,6 +62,42 @@ console.log(user);
 		setClock('timer', deadLine);
 		// Работа таймера конец
 	}
+	// Работа с tabs на странице product
+	let productItem = document.querySelector('.productItem');
+	if (productItem) {
+
+		let innerProductTabs = document.querySelector('.productItem-tabs__top');
+		let productTabs = document.querySelectorAll('.productItem-tabs__btn');
+		let tabsContent = document.querySelectorAll('.productItem-tabs__content');
+
+		productTabs.forEach(el => {
+			el.addEventListener('click', function (e) {
+				e.preventDefault();
+			}, false);
+		});
+		innerProductTabs.addEventListener('click', function (event) {
+			if (event.target.tagName !== 'A') return false; //Если тег элемента не будет а то вернет false и ничего не произайдет
+			let tabsLink = event.target;//выберает ссылку в блоке productItem-tabs__top
+			let attrTabs = event.target.getAttribute('href');//Берет значение href у ссылки
+			let productContentTabs = document.querySelector(attrTabs);// выберает элемент по id из attrTabs
+			// цикл запускает перебор табов у которых есть модификатор active удаляет его и добавляет тому на который кликнули
+			for (let i = 0; i < productTabs.length; i++) {
+				if (productTabs[i].classList.contains('productItem-tabs__btn--active')) {
+					productTabs[i].classList.remove('productItem-tabs__btn--active');
+				}
+				tabsLink.classList.add('productItem-tabs__btn--active');
+			}
+			// цикл запускает перебор контента у которых есть модификатор active удаляет его и добавляет тому у которого соответсвующий id
+
+			for (let o = 0; o < tabsContent.length; o++) {
+				if (tabsContent[o].classList.contains('productItem-tabs__content--active')) {
+					tabsContent[o].classList.remove('productItem-tabs__content--active');
+				}
+				productContentTabs.classList.add('productItem-tabs__content--active');
+			}
+		});
+	}
+	// Работа с tabs на странице product
 });
 
 $(function () {
@@ -118,4 +148,29 @@ $(function () {
 		$('.products-item').removeClass('product__list');
 	});
 	// Работа с кнопками фильтра на странице shop
+
+	// сдайдер на странице product
+	$('.product-slide__thumb').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		centerMode: true,
+		focusOnSelect: true,
+		vertical: true,
+		draggable: false,
+		asNavFor: '.product-slide__big'
+	});
+	$('.product-slide__big').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		draggable: false,
+		asNavFor: '.product-slide__thumb'
+	});
+	// сдайдер на странице product
+
+	// counter product item
+	$('.productItem-form__number').styler();
+	// counter product item
+
 });
