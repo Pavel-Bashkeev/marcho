@@ -1,0 +1,224 @@
+
+.blogPage-one {
+    margin-right: 30px;
+
+    &__content {
+        border: 1px solid #ececec;
+        border-top: none;
+        padding: 30px;
+    }
+
+    &__content-boxTop {
+        display: flex;
+        margin-bottom: 30px;
+
+        &--elem {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        .blog-item__data-link {
+            &::before {
+                background-image: url('../images/dest/icons/calendar.svg');
+            }
+        }
+
+        .blog-item__comment {
+            &-link {
+                padding-left: 33px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url('../images/dest/icons/comment.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+        }
+
+        .blog-item__author-link {
+            &::before {
+                background-image: url('../images/dest/icons/userRed.svg');
+
+            }
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        @extend %roboto-400;
+        color: $colorTitle;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__blockquote {
+        padding: 40px;
+        border-left: 3px solid $radicalRed;
+        font-size: 22px;
+        @extend %roboto-400;
+        color: $colorTitle;
+        line-height: 1.455;
+        margin: 35px 0px;
+        background-color: #f6f6f6;
+    }
+
+    &__bottom {
+        display: flex;
+
+        &-image {
+            margin-right: 30px;
+            max-width: 341px;
+            width: 100%;
+        }
+    }
+}
+
+.blog-author {
+    padding: 30px 0px 40px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 37px;
+
+    &__top {
+        padding: 0 30px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__tags {
+        &-text {
+            text-transform: uppercase;
+            color: $colorTitle;
+            font-weight: 500;
+        }
+    }
+
+    &__share {
+        &-text {
+            text-transform: uppercase;
+            color: $colorTitle;
+            font-weight: 500;
+        }
+    }
+
+    &__info {
+        display: flex;
+
+        &-img {
+            margin-right: 30px;
+            width: 140px;
+            height: 140px;
+        }
+
+        &-name {
+            font-size: 22px;
+            @extend %roboto-400;
+            color: $colorTitle;
+            line-height: 44px;
+            margin-bottom: 9px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.blogPage-one__comments {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 40px;
+
+    &-title {
+        font-size: 24px;
+        @extend %roboto-700;
+        color: $colorTitle;
+        line-height: 1.083;
+        margin-bottom: 28px;
+        text-transform: uppercase;
+    }
+
+    .review-item {
+        padding-top: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.blogPage-one__comment {
+    &-title {
+        font-size: 24px;
+        @extend %roboto-700;
+        color: $colorTitle;
+        line-height: 1.083;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+}
+
+.form-comment {
+    margin-bottom: 96px;
+    &__box {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    &__input {
+        max-width: 370px;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        height: 60px;
+        border: 1px solid #ececec;
+        outline: none;
+        padding: 0 24px;
+        font-size: 16px;
+        color: $colorText;
+        line-height: 26px;
+        @extend %quicksand-500;
+
+        &::placeholder {
+            font-size: 16px;
+            color: $colorText;
+            line-height: 26px;
+            @extend %quicksand-500;
+        }
+    }
+
+    &__textarea {
+        max-width: 770px;
+        width: 100%;
+        height: 220px;
+        resize: none;
+        border: 1px solid #ececec;
+        outline: none;
+        padding: 16px 24px;
+        font-size: 16px;
+        color: $colorText;
+        line-height: 26px;
+        @extend %quicksand-500;
+        margin-bottom: 33px;
+
+        &::placeholder {
+            font-size: 16px;
+            color: $colorText;
+            line-height: 26px;
+            @extend %quicksand-500;
+        }
+    }
+}

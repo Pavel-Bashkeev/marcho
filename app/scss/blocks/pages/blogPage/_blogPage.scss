@@ -1,0 +1,134 @@
+.blogPage {
+    padding: 120px 0 60px;
+
+    &__inner {
+        display: flex;
+    }
+}
+
+.blogPage-items {
+    max-width: 770px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.blogPage-filters {
+    max-width: 370px;
+    width: 100%;
+}
+
+.blogPage-item {
+    margin-bottom: 60px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #ececec;
+
+    }
+
+    &__title {
+        color: $colorTitle;
+        font-size: 22px;
+        line-height: 32px;
+        @extend %roboto-400;
+        margin-bottom: 23px;
+        display: inline-block;
+    }
+
+    &:hover {
+        box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
+
+        .blogPage-item__title {
+            color: $radicalRed;
+        }
+    }
+
+    &__content {
+        padding: 45px 40px 34px;
+
+        .blog-item__info {
+            justify-content: flex-start;
+            margin-bottom: 20px;
+            padding: 0;
+
+            .blog-item__author {
+                margin-right: 35px;
+            }
+        }
+    }
+}
+.blogPage-items__item--image{
+    display: block;
+    .blogPage-item__top--image{
+        .blogPage-item__image{
+            display: block;
+        }
+    }
+}
+.blogPage-item__top--video {
+    position: relative;
+    display: block;
+
+    .videoBlog__play-btn--img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+}
+
+.Btn_bg {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+    position: absolute;
+    left: 415px;
+    top: 2394px;
+    width: 40px;
+    height: 40px;
+    z-index: 299;
+}
+
+.blogPage-item__top--slider {
+    display: block;
+    .slick-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        background-color: $radicalRed;
+        box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+        .svg-inline--fa {
+            fill: #fff;
+            width: 14px;
+            height: 20px;
+        }
+    }
+
+    .slick-disabled {
+        background-color: #fff;
+        cursor: default;
+
+        .svg-inline--fa {
+            fill: $radicalRed;
+        }
+    }
+
+    .slick-prev {
+        left: 40px;
+        z-index: 1;
+    }
+
+    .slick-next {
+        right: 40px;
+    }
+
+
+}

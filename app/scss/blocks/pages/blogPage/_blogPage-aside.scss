@@ -1,0 +1,84 @@
+.aside-author {
+    text-align: center;
+
+    &__avatar {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 34px
+    }
+
+    &__name {
+        color: $colorTitle;
+        font-size: 18px;
+        @extend %roboto-700;
+        margin-bottom: 3px;
+    }
+
+    &__prof {
+        color: $radicalRed;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        margin-bottom: 23px;
+        @extend %quicksand-500;
+    }
+}
+
+.latestPost {
+
+    &__item {
+        display: flex;
+        align-items: stretch;
+        &:not(:first-child){
+            padding-top: 18px;
+        }
+        &:not(:last-child){
+            padding-bottom: 18px;
+        border-bottom: 1px solid #ececec;
+        }
+    }
+
+    &__img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-title {
+            font-size: 18px;
+            @extend %roboto-400;
+            color: $colorTitle;
+            line-height: 25px;
+            margin-bottom: 8px;
+        }
+
+        &-data {
+            padding-left: 21px;
+            position: relative;
+
+            &::before {
+                content: '';
+                height: 16px;
+                width: 16px;
+                position: absolute;
+                left: -3px;
+                top: 5px;
+                background-image: url('../images/dest/icons/calendar.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+}

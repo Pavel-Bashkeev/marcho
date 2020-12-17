@@ -28,6 +28,16 @@
 @import 'blocks/pages/produtctItem/productItem-review';
 @import 'blocks/pages/produtctItem/productItem-related';
 // end page productItem
+
+// start page blog
+@import 'blocks/pages/blogPage/blogPage';
+@import 'blocks/pages/blogPage/blogPage-aside';
+// end page blog
+
+// start page blog-one
+@import 'blocks/pages/blog-one/blog-one';
+// end page blog-one
+
 // start page login & register
 @import 'blocks/pages/login&register/login&register';
 // end page login & register
