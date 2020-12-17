@@ -31,6 +31,21 @@ body {
     display: flex;
     flex-direction: column;
 }
+input,
+textarea{
+    font-size: 16px;
+    color: $colorText;
+    line-height: 26px;
+    @extend %quicksand-500;
+    padding: 0 24px;
+    border: 1px solid #ececec;
+}
+*::placeholder {
+    font-size: 16px;
+    color: $colorText;
+    line-height: 26px;
+    @extend %quicksand-500;
+}
 
 .container {
     max-width: 1200px;
@@ -114,11 +129,13 @@ body {
 
     &__item {
         color: #727272;
-        &:not(:last-child){
+
+        &:not(:last-child) {
             padding-right: 25px;
             margin-right: 18px;
             position: relative;
-            &::after{
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: 50%;
