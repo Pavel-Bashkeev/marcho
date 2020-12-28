@@ -1,0 +1,9 @@
+.promo-partners{
+    padding: 121px 0;
+ background-color: #fff;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

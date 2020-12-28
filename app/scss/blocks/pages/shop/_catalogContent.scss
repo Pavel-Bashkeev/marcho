@@ -1,0 +1,104 @@
+.shop-catalog {
+    flex-grow: 1;
+
+    &__filters {}
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 370px));
+        justify-content: center;
+        grid-gap: 65px 30px;
+        &.content-list{
+            grid-template-columns: 1fr;
+            grid-row-gap: 30px;
+        }
+    }
+
+    &__filters {
+        border: 1px solid #ececec;
+        margin-bottom: 40px;
+        padding: 13px 17px 13px 29px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.filter-catalog {
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        border: none;
+        background-color: #fff;
+        padding: 0;
+        margin-left: 15px;
+        display: block;
+        cursor: pointer;
+        outline: transparent;
+        line-height: 0;
+        svg{
+            fill: $colorText;
+        }
+
+        &--active{
+            svg{
+                fill: $radicalRed;
+            }
+        }
+    }
+
+    &__list {
+        border: none;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
+    }
+}
+
+// Действия со списками сортировки
+.jq-selectbox__select {
+    height: 32px;
+    padding: 0 32px 0 10px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    background: linear-gradient(transparent);
+    @extend %quicksand-500;
+    font-size: 16px;
+    color: $colorText;
+    text-shadow: none;
+    box-shadow: none;
+    outline: transparent;
+    &:hover{
+        background: linear-gradient(transparent);
+    }
+    &:active{
+        box-shadow: none;
+        background-color: transparent;
+    }
+}
+.jq-selectbox__select-text {
+    display: block;
+    width: 100%;
+    @extend %quicksand-500;
+    color: $colorText;
+}
+.jq-selectbox__trigger {
+    border-left: none;
+}
+.jq-selectbox.focused .jq-selectbox__select{
+    border: none;
+}
+.jq-selectbox__trigger-arrow {
+    width: 10px;
+    height: 5px;
+    border: none;
+    background-image: url(../images/dest/icons/angle-down.svg);
+}
+// Конец действия со списками сортировки
+

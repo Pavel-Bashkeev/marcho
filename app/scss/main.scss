@@ -1,9 +1,52 @@
 @import 'blocks/vars';
 @import 'blocks/fonts';
+@import './libs';
 
 
 @import 'blocks/global';
 @import 'blocks/header';
+// page index
+@import 'blocks/topSlider';
+@import 'blocks/working';
+@import 'blocks/categories';
+@import 'blocks/videoBlog';
+@import 'blocks/products';
+@import 'blocks/promoTimer';
+@import 'blocks/promoPartners';
+@import 'blocks/blog';
+// end page index
+// start page shop
+@import 'blocks/pages/shop/catalog';
+@import 'blocks/pages/shop/productCart';
+@import 'blocks/pages/shop/catalogFilters';
+@import 'blocks/pages/shop/catalogContent';
+@import 'blocks/pages/shop/pagination';
+// end page shop
+// start page productItem
+@import 'blocks/pages/produtctItem/productItem';
+@import 'blocks/pages/produtctItem/productItem-tabs';
+@import 'blocks/pages/produtctItem/productItem-review';
+@import 'blocks/pages/produtctItem/productItem-related';
+// end page productItem
+
+// start page blog
+@import 'blocks/pages/blogPage/blogPage';
+@import 'blocks/pages/blogPage/blogPage-aside';
+// end page blog
+
+// start page blog-one
+@import 'blocks/pages/blog-one/blog-one';
+// end page blog-one
+// start page contacts
+@import 'blocks/pages/contacts/contacts';
+// end page contacts
+
+// start page login & register
+@import 'blocks/pages/login&register/login&register';
+// end page login & register
+// start 404-page
+@import 'blocks/pages/404/404';
+// end 404-page
 
 @import 'blocks/footer';
 

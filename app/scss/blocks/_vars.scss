@@ -22,3 +22,19 @@ $white : #fff;
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
 }
+
+%checkboxHide{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+
+// Исправление ошибки fancybox
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
